@@ -26,7 +26,7 @@ TEST_F(ACourse, IsCreated) {
   ASSERT_THAT(course->getName(), Eq("math"));
 }
 
-// Needs a environment variable ENV_COLLEGE with value Standford
+// Needs environment variable ENV_COLLEGE with value Standford
 TEST_F(ACourse, WhenCreatedInitializesCollegeProperty) {
   ASSERT_THAT(course->getCollege(), Eq("Stanford"));
 }
