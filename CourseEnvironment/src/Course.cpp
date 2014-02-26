@@ -1,25 +1,29 @@
 #include "Course.h"
 
-#include "Environment.h"
-
-using namespace boost::posix_time;
+#include <Windows.h>
 
 Course::Course(const std::string & name)
 : name(name) {
-  Environment environment;
-  this->college = environment.getVariable("ENV_COLLEGE");
+
+  const DWORD buffSize = 65535; 
+  static char buffer[buffSize]; 
+  if (GetEnvironmentVariableA("ENV_COLLEGE", buffer, buffSize)) 
+  { 
+    this->college = std::string(buffer);
+  } else { 
+    this->college = "";
+  }
 }
 
 Course::~Course() {}
 
 void Course::start() {
-  this->startTime = microsec_clock::local_time();
+  this->startTime = clock();
 }
 
 void Course::end() {
-  ptime endTime = microsec_clock::local_time();
-  time_duration elapsed = endTime - startTime;
-  duration = static_cast<int>(elapsed.total_microseconds() / 1000000.0);
+  clock_t endTime = clock();
+  duration = static_cast<int>((endTime - startTime) / CLOCKS_PER_SEC);
 }
 
 std::string Course::getName() const {

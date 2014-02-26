@@ -4,7 +4,7 @@
 
 #include <string>
 
-#include <boost/date_time/posix_time/posix_time_types.hpp>
+#include <ctime>
 
 class Course
 {
@@ -28,7 +28,7 @@ private:
   std::string name;
   int duration;
   std::string college;
-  boost::posix_time::ptime startTime;
+  clock_t startTime;
 };
 #endif // !Course_H
 

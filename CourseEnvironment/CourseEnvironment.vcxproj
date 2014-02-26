@@ -53,12 +53,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>C:\local\boost_1_55_0;C:\Source\gmock-1.7.0\gtest\include;C:\Source\gmock-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Source\gmock-1.7.0\gtest\include;C:\Source\gmock-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\local\boost_1_55_0\lib64-msvc-12.0;C:\local\boost_1_55_0\libs;C:\Source\gmock-1.7.0\msvc\2010\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Source\gmock-1.7.0\msvc\2010\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>gmock.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -80,13 +80,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Environment.cpp" />
     <ClCompile Include="src\Course.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test\CourseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Environment.h" />
     <ClInclude Include="src\Course.h" />
   </ItemGroup>
   <ItemGroup>
