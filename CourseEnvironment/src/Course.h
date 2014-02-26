@@ -23,8 +23,6 @@ public:
   int getDurationInSeconds() const;
 
 private:
-  static const int SecondsPerMinute{60};
-
   std::string name;
   int duration;
   std::string college;

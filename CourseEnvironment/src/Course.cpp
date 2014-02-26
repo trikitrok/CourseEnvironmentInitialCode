@@ -39,7 +39,8 @@ int Course::getDurationInSeconds() const {
 }
 
 bool Course::isShort() const {
-  return this->duration < 2 * SecondsPerMinute;
+  const int twoMinutes = 2 * 60;
+  return this->duration < twoMinutes;
 }
 
 bool Course::isLong() const {
