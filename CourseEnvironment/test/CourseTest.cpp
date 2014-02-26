@@ -8,8 +8,6 @@ using namespace ::testing;
 class ACourse : public Test {
 protected:
   const std::string CourseName{"math"};
-  const int SecondInMicroSeconds{1000000};
-  const int SecondsPerMinute{60};
   Course * course;
 
   virtual void SetUp() {
