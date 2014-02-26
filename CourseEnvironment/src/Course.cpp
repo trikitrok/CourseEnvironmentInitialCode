@@ -5,6 +5,7 @@
 Course::Course(const std::string & name)
 : name(name) {
 
+  // Setting college property
   const DWORD buffSize = 65535; 
   static char buffer[buffSize]; 
   if (GetEnvironmentVariableA("ENV_COLLEGE", buffer, buffSize)) 
@@ -23,7 +24,7 @@ void Course::start() {
 
 void Course::end() {
   clock_t endTime = clock();
-  duration = static_cast<int>((endTime - startTime) / CLOCKS_PER_SEC);
+  this->duration = static_cast<int>((endTime - this->startTime) / CLOCKS_PER_SEC);
 }
 
 std::string Course::getName() const {
