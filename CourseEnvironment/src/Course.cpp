@@ -6,12 +6,11 @@ Course::Course(const std::string & name)
 : name(name) {
 
   // Setting college property
-  const DWORD buffSize = 65535; 
-  static char buffer[buffSize]; 
-  if (GetEnvironmentVariableA("ENV_COLLEGE", buffer, buffSize)) 
-  { 
+  const DWORD buffSize = 65535;
+  static char buffer[buffSize];
+  if (GetEnvironmentVariableA("ENV_COLLEGE", buffer, buffSize)) {
     this->college = std::string(buffer);
-  } else { 
+  } else {
     this->college = "";
   }
 }
