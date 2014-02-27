@@ -1,9 +1,6 @@
 #pragma once
-#ifndef Course_H
-#define Course_H
 
 #include <string>
-
 #include <ctime>
 
 class Course
@@ -28,6 +25,3 @@ private:
   std::string college;
   clock_t startTime;
 };
-#endif // !Course_H
-
-
